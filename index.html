@@ -648,7 +648,7 @@ const ROUTE = {"source":"overpass-corridor","generatedAt":"2026-08-16T16:13:56.7
 "use strict";
 /* ============================================================ [S1] CONSTANTS */
 
-const VERSION = "2.2.1";
+const VERSION = "2.2.2";
 
 const CHALLENGE = {
   name: "Route 66",
@@ -2088,8 +2088,11 @@ function showSheet(html) {
   $$("#sheet-in [data-close]").forEach(b => b.addEventListener("click", closeSheet));
   // Focus the sheet itself, not a field: on a phone a focused field throws up the
   // keyboard or the date picker before the sheet has been read.
+  // Opening a dialog focuses its first button, which in a long sheet is at the bottom
+  // and scrolls there. Always start at the top.
   $("#sheet-in").tabIndex = -1;
-  $("#sheet-in").focus();
+  $("#sheet-in").focus({ preventScroll: true });
+  d.scrollTop = 0;
 }
 function closeSheet() { const d = sheet(); if (d.open) d.close(); }
 

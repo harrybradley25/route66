@@ -2,7 +2,7 @@
 // It caches the app's own files only. It never touches localStorage, so an
 // update can never affect the log. Bump CACHE with every release (matches VERSION
 // in index.html); the old cache is deleted when the new one takes over.
-const CACHE = "route66-2.2.1";
+const CACHE = "route66-2.2.2";
 const FILES = ["./", "./index.html", "./manifest.webmanifest",
                "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png"];
 
