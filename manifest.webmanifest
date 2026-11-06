@@ -1,0 +1,16 @@
+{
+  "name": "Route 66",
+  "short_name": "Route 66",
+  "description": "Log each day's miles on the Route 66 virtual challenge and see where you are.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#26282A",
+  "theme_color": "#26282A",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
